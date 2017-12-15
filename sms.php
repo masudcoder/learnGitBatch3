@@ -1,9 +1,5 @@
 <?php
-	
-$user = "user name will be provided by sslwireless ";    
-$sid = "sid will be provided by sslwireless";
-$pass="";
-		
+	//sadsadsadsa
 $url="http://sms.sslwireless.com/pushapi/dynamic/server.php";
 $param="user=$user&pass=$pass&sms[0][0]= 8801738723260 &sms[0][1]=".urlencode("আপনি এই পৃষ্ঠাটি অনেক বার দেখেছে")."&sms[1][0]= 8801739976459 &sms[1][1]=".urlencode("আপনি এই পৃষ্ঠাটি অনেক বার দেখেছে")."&sid=$sid";
 

@@ -1,0 +1,21 @@
+$user = "bdeducation";
+$pass = "Bdedu123!@#";
+$sid = "BDeducationsNonBrand";
+$url="http://sms.sslwireless.com/pushapi/dynamic/server.php";
+//$url = "http://isms.sslwireless.com";
+
+$param="user=$user&pass=$pass&sms[0][0]= 8801739976459 &sms[0][1]=".urlencode("Checking SMS SERVICE FROM MASUD")."&sms[1][0]= 8801613243663 &sms[1][1]=".urlencode("TESTING SMS SERVICE FROM MASUD")."&sid=$sid";
+
+
+$crl = curl_init();
+curl_setopt($crl,CURLOPT_SSL_VERIFYPEER,FALSE);
+curl_setopt($crl,CURLOPT_SSL_VERIFYHOST,2);
+curl_setopt($crl,CURLOPT_URL,$url);
+curl_setopt($crl,CURLOPT_HEADER,0);
+curl_setopt($crl,CURLOPT_RETURNTRANSFER,1);
+curl_setopt($crl,CURLOPT_POST,1);
+curl_setopt($crl,CURLOPT_POSTFIELDS,$param);
+$response = curl_exec($crl);
+
+curl_close($crl);
+echo $response;
